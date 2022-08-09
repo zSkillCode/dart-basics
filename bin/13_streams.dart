@@ -2,9 +2,7 @@ import 'dart:async';
 
 void main() {
   final NumberGenerator numberGenerator = NumberGenerator();
-
-  final StreamSubscription subscription =
-      numberGenerator.stream.listen((event) {
+  numberGenerator.stream.listen((event) {
     print(event);
   }, onError: (error) {
     print("Error");
